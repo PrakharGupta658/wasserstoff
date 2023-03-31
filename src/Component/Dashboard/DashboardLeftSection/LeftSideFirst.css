@@ -1,0 +1,16 @@
+.Left_container{
+  display: flex;
+  justify-content: center;
+ 
+}
+.text{
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.user_container{
+   display: flex;
+   margin-top: 15vh;  
+   justify-content: center;
+   
+}

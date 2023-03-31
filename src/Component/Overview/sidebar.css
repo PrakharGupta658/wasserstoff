@@ -1,0 +1,114 @@
+.sidebar-title {
+    width: 344px;
+    height: 44px;
+    top: 83px;
+    left: 56px;
+    font-weight: 600;
+    font-size: 19px;
+    margin-top: 10px;
+    margin-left: 33px;
+
+}
+
+.sidebar__amount{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.users {
+    width: 187px;
+    Height: 16px;
+    color: #383874;
+    padding-bottom: 0;
+    margin-left: 5px;
+}
+
+.users>span {
+    padding-left: 1rem;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    color: #383874;
+}
+
+.totalUser {
+    width: 260px;
+    font-size: 52px;
+    font-weight: 500;
+    letter-spacing: -1.75px;
+    color: #383874;
+}
+
+.earning {
+    line-height: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    align-items: center;
+    letter-spacing: 0.44px;
+    color: #383874;
+}
+
+.earning> :nth-child(2) {
+    width: 120px;
+    height: 32px;
+}
+
+.sales {
+    line-height: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    align-items: center;
+    letter-spacing: 0.44px;
+    color: #383874;
+    width: 120px;
+}
+
+.sales> :nth-child(2) {
+    width: 120px;
+    height: 32px;
+}
+
+.purchases {
+    line-height: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    align-items: center;
+    letter-spacing: 0.44px;
+    color: #383874;
+}
+
+.purchases> :nth-child(2) {
+    width: 120px;
+    height: 32px;
+}
+
+.sidebar-dough__bax1{
+    display: flex;
+    margin-left: 80px;
+    width: 88px;
+}
+.sidebar-dough__bax1 .active{
+    letter-spacing: 0.44px;
+    line-height: 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    width: 102.25px;
+}
+
+.sidebar-dough__bax2{
+    display: flex;
+    margin-left: 88px;
+    width: 88px;
+}
+
+.sidebar-dough__bax2 .new{
+    letter-spacing: 0.44px;
+    line-height: 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    width: 102.25px;
+}
+
+
+

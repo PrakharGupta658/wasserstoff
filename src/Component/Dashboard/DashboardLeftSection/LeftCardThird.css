@@ -1,0 +1,21 @@
+.card-container-third {
+    display: flex;
+    flex-direction: column;
+    width: 219px;
+    height: 120px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: Roboto,sansSerif;
+    font-size: 12px;
+    background-color: white;
+    
+  }
+  
+  .card-row-third {
+    display: flex;
+    width: 70px;
+  }
+  
+  .card_third {
+    margin: 10px;
+  }
