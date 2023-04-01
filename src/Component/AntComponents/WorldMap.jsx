@@ -1,77 +1,69 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { GridMap } from '@ant-design/maps';
+import { DotMap } from '@ant-design/maps';
 
 const DemoGridMap = () => {
-  const [data, setData] = useState([]);
+  const [list, setData] = useState([]);
 
   useEffect(() => {
     asyncFetch();
   }, []);
 
   const asyncFetch = () => {
-    fetch('https://gw.alipayobjects.com/os/basement_prod/7359a5e9-3c5e-453f-b207-bc892fb23b84.csv')
-      .then((response) => response.text())
-      .then((json) => setData(json))
+    fetch('https://gw.alipayobjects.com/os/antfincdn/g5hIthhKlr/quanguoshixianweizhi.json')
+      .then((response) => response.json())
+      .then(({ list }) => setData(list))
       .catch((error) => {
         console.log('fetch data failed', error);
       });
   };
-  if (!data.length) {
-    return null;
-  }
+
   const config = {
     map: {
       type: 'mapbox',
       style: 'dark',
-      pitch: 48,
-      center: [109.054293, 29.246265],
-      zoom: 6,
+      zoom: 5,
+      center: [107.4976, 32.1697],
+      pitch: 45,
     },
     source: {
-      data: data,
+      data: list,
       parser: {
-        type: 'csv',
-        x: 'lng',
-        y: 'lat',
-      },
-      aggregation: {
-        radius: 20000,
-        field: 'v',
-        method: 'sum',
+        type: 'json',
+        coordinates: 'lnglat',
       },
     },
-    shape: 'squareColumn',
+    color: '#47aff7',
     size: {
-      field: 'count',
-      value: ({ count }) => {
-        return count * 200;
+      field: 'style',
+      value: ({ style }) => {
+        if (style == 0) {
+          return 8;
+        } else if (style == 1) {
+          return 4;
+        } else {
+          return 2;
+        }
       },
-    },
-    color: {
-      field: 'count',
-      value: [
-        '#8C1EB2',
-        '#8C1EB2',
-        '#DA05AA',
-        '#F0051A',
-        '#FF2A3C',
-        '#FF4818',
-        '#FF4818',
-        '#FF8B18',
-        '#F77B00',
-        '#ED9909',
-        '#ECC357',
-        '#EDE59C',
-      ].reverse(),
     },
     style: {
-      coverage: 0.9,
-      angle: 0,
+      opacity: 0.8,
+      stroke: '#c3faff',
+      strokeWidth: 1,
+    },
+    state: {
+      active: {
+        color: '#FFF684',
+      },
+    },
+    zoom: {
+      position: 'bottomright',
+    },
+    tooltip: {
+      items: ['name'],
     },
   };
 
-  return <GridMap {...config} />;
+  return <DotMap {...config} />;
 };
 
 export default DemoGridMap;

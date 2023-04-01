@@ -2,6 +2,7 @@ import React from "react";
 
 import Sidebar from "./Sidebar";
 import DemoGridMap from "../AntComponents/WorldMap";
+import OverviewRight from "./RightSide";
 
 
 function Overview() {
@@ -9,9 +10,9 @@ function Overview() {
     <>
       <div style={{ height: "100vh", backgroundColor: "#E2E4F0"}}>
         
-          <div style={{ display: "flex" , columnGap:"350px" }}>
+          <div style={{ display: "flex" }}>
             <Sidebar />
-           <DemoGridMap/>
+           <OverviewRight/>
           </div>
       
       </div>

@@ -211,11 +211,19 @@ const Sidebar = () => {
             marginTop: "15px",
             backgroundColor: "white",
             marginLeft: "45px",
-            marginBottom:"15px",
+            marginBottom:"12px",
+            borderRadius:"10px"
            
           }}
-        >
-          <DemoColumn />
+        ><div className='overView__bottom' >
+      <div className="bottom__salesNumber">
+        <div className='bottom__salesNumber-title'>Sales Figures</div>
+        <div className='bottom__salesNumber-amount'>$10,430</div>
+      </div>
+      <div className="bottom__barChart">
+        <DemoColumn />
+      </div>
+    </div>
         </div>
       </div>
     </>

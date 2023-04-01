@@ -5,6 +5,7 @@ import Footer from "./Component/Footer";
 import Header from "./Component/Header/Header";
 import Overview from "./Component/Overview/Overview";
 import ModelComponent from "./Component/Overview/ReactModal/ModelComponent";
+import DemoGridMap from "./Component/AntComponents/WorldMap";
 
 
 
@@ -14,9 +15,10 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
+        <ModelComponent/>
         <Routes>
-          <Route exact path="/" element={<Overview />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route exact path="/overview" element={<Overview />} />
+          <Route exact path="/" element={<Dashboard />} />
           <Route exact path="/statics" element={<ModelComponent />} />
         </Routes>
         <Footer />

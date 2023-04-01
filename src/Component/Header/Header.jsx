@@ -22,8 +22,8 @@ function Header() {
             </div>
             <div className='navigation'>
                 <NavLink className="navigation__link" to='/statics'>Statistics</NavLink>
-                <NavLink className="navigation__link" to="/">Overview</NavLink>
-                <NavLink className="navigation__link" to="dashboard">Dashboard</NavLink>
+                <NavLink className="navigation__link" to="/overview">Overview</NavLink>
+                <NavLink className="navigation__link" to="/">Dashboard</NavLink>
                 <NavLink className="navigation__link" to='#'>Analytics</NavLink>
             </div>
             <div className='right-section'>
